@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binary Converter & Calculator</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-info" id="app-info">
+    <p>Application Information</p>
+  </div>
+
+  <!-- Tambahkan ini di dalam tag <body> Anda -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close"></span>
+    <h3>Selamat datang di Konverter dan Kalkulator Bilangan Komputer 2IA04 - Kelompok 2!</h3>
+    <br>
+    <p>Website ini merupakan hasil dari kolaborasi mahasiswa kelas 2IA04 dalam rangka memenuhi tugas akhir yang diberikan oleh Organisasi Sistem Komputer (OSK). Kelompok 2 telah berupaya keras untuk menyajikan alat konversi dan kalkulator yang dapat membantu Anda dalam memahami dan bekerja dengan bilangan komputer.</p>
+  </div>
+</div>
+
+
+  <div class="mode-container">
+    <div class="btn-group">
+      <button onclick="setMode('converter')">Konversi</button>
+      <button onclick="setMode('calculator')">Kalkulator</button>
+    </div>
+  </div>
+
+  <!-- Converter Container (unchanged) -->
+  <div class="container" id="converter-container">
+    <h2>Number Converter</h2>
+    <div class="select">
+      <label for="conversion-from">Konversi dari:</label>
+      <select id="conversion-from">
+        <option value="binary">Biner</option>
+        <option value="decimal">Desimal</option>
+        <option value="octal">Oktal</option>
+        <option value="hexadecimal">Heksadesimal</option>
+      </select>
+    </div>
+    <div class="wrapper">
+      <div class="input-wrapper">
+        <label for="binary-inp">Masukan Bilangan:</label>
+        <input type="text" id="binary-inp" autocomplete="off" />
+      </div>
+    </div>
+    <div class="select">
+      <label for="conversion-to">Konversi ke:</label>
+      <select id="conversion-to">
+        <option value="decimal">Desimal</option>
+        <option value="binary">Biner</option>
+        <option value="octal">Oktal</option>
+        <option value="hexadecimal">Heksadesimal</option>
+      </select>
+    </div>
+    <div class="button">
+      <button id="convert-button" class="left-button">Konversi</button>
+      <button id="reset-button-converter" class="right-button">Reset</button>
+    </div>
+    <div class="result-wrapper">
+      <label for="result">Hasil:</label>
+      <input type="text" id="result" readonly />
+    </div>
+    <p id="error-msg"></p>
+  </div>
+
+  <!-- Calculator Container -->
+  <div class="container" id="calculator-container" style="display: none;">
+    <h2>Calculator</h2>
+    <div class="wrapper">
+      <div class="input-wrapper">
+        <div class="select">
+          <label for="number-type">Pilih Jenis Bilangan:</label>
+          <select id="number-type">
+            <option value="binary">Biner</option>
+            <option value="octal">Oktal</option>
+            <option value="hexadecimal">Heksadesimal</option>
+            <option value="decimal">Desimal</option>
+          </select>
+        </div>
+        <label for="num1">Masukkan Angka Pertama:</label>
+        <input type="text" id="num1" />
+        <label for="num2">Masukkan Angka Kedua:</label>
+        <input type="text" id="num2" />
+      </div>
+    </div>
+    <div class="select operator-select">
+      <label for="operator">Pilih Operator:</label>
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+      </select>
+    </div>
+    <div class="button">
+      <button id="calculate-button" class="left-button">Hitung</button>
+      <button id="reset-button-calculator" class="right-button">Reset</button>
+    </div>
+    <div class="result-wrapper">
+      <label for="calc-result">Hasil:</label>
+      <input type="text" id="calc-result" readonly />
+    </div>
+    <p id="calc-error-msg"></p>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+  </body>
+</html>
