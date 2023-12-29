@@ -1,0 +1,180 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-info {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+
+.mode-container {
+    margin-top: 3px; /* Atur jarak sesuai kebutuhan */
+    margin-bottom: 13px;
+}
+
+.mode-container .button {
+    background-color: #808080;
+}
+
+.btn-group button {
+    background-color: white; /* Warna putih */
+    color: #333; /* Warna teks */
+    cursor: pointer;
+    padding: 10px 50px;
+    border: 0.5px solid #ddd;
+    border-radius: 30px;
+}
+
+
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrapper,
+.select,
+.button,
+.result-wrapper {
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styling for Convert and Calculate buttons */
+.left-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7D7C7C; /* Warna abu-abu */
+    color: white;
+    cursor: pointer;
+    float: left;
+}
+
+/* Styling for Reset buttons */
+.right-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF1E00; /* Warna merah */
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+
+.right-button:hover{background-color: #DF2E38;}
+.left-button:hover{background-color: #9E9FA5;}
+
+.button:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Tambahkan ini di file CSS Anda */
+.modal {
+    display: none; /* Modal awalnya tersembunyi */
+    position: fixed; /* Tetap berada di tempat saat digulir */
+    z-index: 1; /* Berada di atas semua konten lainnya */
+    padding-top: 100px; /* Lokasi modal */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    overflow: auto; /* Memungkinkan gulir jika diperlukan */
+    background-color: rgb(0,0,0); /* Warna latar belakang */
+    background-color: rgba(0,0,0,0.4); /* Warna latar belakang dengan sedikit transparansi */
+  }
+  
+  /* Konten modal */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  /* Tombol tutup modal */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .left-button, .right-button {
+        float: none;
+        width: 100%;
+    }
+    .input-wrapper.left,
+    .input-wrapper.right {
+        width: 100%;
+    }
+}
